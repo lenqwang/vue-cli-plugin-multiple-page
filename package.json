@@ -12,32 +12,38 @@
     "url": "https://github.com/qqcome110/vue-cli-plugin-multiple-page/issues"
   },
   "scripts": {
-    "cz": "npx git-cz"
+    "cz": "npx git-cz",
+    "release": "release-it"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "peerDependencies": {
     "@vue/cli-service": "^3.0.0 || ^4.0.0-0"
   },
   "devDependencies": {
+    "@release-it/conventional-changelog": "^2.0.0",
+    "babel-eslint": "^10.0.1",
     "chalk": "^4.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "cli-highlight": "^2.1.4",
-    "cosmiconfig": "^7.0.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.4",
-    "prompts": "^2.3.2",
-    "webpack": "4.4.0",
-    "webpack-chain": "^6.5.1",
-    "husky": "^2.3.0",
-    "lint-staged": "^8.1.7",
     "commitlint": "^8.0.0",
     "commitlint-config-cz": "^0.11.1",
+    "cosmiconfig": "^7.0.0",
     "cz-customizable": "^6.1.0",
     "eslint": "^5.16.0",
+    "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.3",
     "eslint-plugin-node": "^9.1.0",
     "eslint-plugin-promise": "^4.1.1",
     "eslint-plugin-standard": "^4.0.0",
-    "babel-eslint": "^10.0.1",
-    "eslint-config-standard": "^12.0.0"
+    "husky": "^2.3.0",
+    "lint-staged": "^8.1.7",
+    "optimize-css-assets-webpack-plugin": "^5.0.4",
+    "prompts": "^2.3.2",
+    "release-it": "^14.2.0",
+    "webpack": "4.4.0",
+    "webpack-chain": "^6.5.1"
   },
   "husky": {
     "hooks": {
