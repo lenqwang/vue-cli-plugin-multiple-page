@@ -16,7 +16,8 @@
     "release": "dotenv release-it --"
   },
   "publishConfig": {
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
     "@vue/cli-service": "^3.0.0 || ^4.0.0-0"
