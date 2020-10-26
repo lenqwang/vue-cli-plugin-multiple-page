@@ -1,0 +1,12 @@
+{
+  "basePath": "resources/assets/js/views",
+  "destBasePath": "public/js/v",
+  "entry": {
+    "页面key": {
+      "srcPath": "your/entry/file/path",
+      "name": "index",
+      "output": "index",
+      "description": "页面描述"
+    }
+  }
+}
