@@ -13,7 +13,7 @@
   },
   "scripts": {
     "cz": "npx git-cz",
-    "release": "release-it"
+    "release": "dotenv release-it --"
   },
   "publishConfig": {
     "access": "public"
@@ -31,6 +31,7 @@
     "commitlint-config-cz": "^0.11.1",
     "cosmiconfig": "^7.0.0",
     "cz-customizable": "^6.1.0",
+    "dotenv-cli": "^4.0.0",
     "eslint": "^5.16.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.17.3",
