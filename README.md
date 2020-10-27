@@ -1,6 +1,14 @@
 # vue-cli-plugin-multiple-page
 
-> build/watch multiple page one time for vue-cli
+> A plugin that bundle multiple page based-on vue-cli. Unlike `vue-cli's pages` configuration, it's handled by sharding multiple pages into different webpack configurations 
+
+## Usage
+
+Install the plugin in your project created by vue-cli, if not please refer to [Not Vue-CLI created Project](#not-vue-cli-created-project)
+
+``` sh
+vue add multiple-page
+```
 
 ## Commands
 
@@ -51,18 +59,18 @@ vue-cli-service build-multi --key page,page1 # build page,page1 two entries
 }
 ```
 
-The final result of above configuration will be generates:
+The configuration file above will generates the following corresponding paths:
 
 - entry: [`yourProject/resources/assets/js/views/page/index.js`, `yourProject/resources/assets/js/views/page1/index.js`]
 - output: [`yourProject/public/js/v/page-index/index.js`, `yourProject/public/js/v/page1-index/index.js`]
 
 ### watch-multi
 
-The command like `build-multi`, but it in watch mode
+This command, like the `vue-cli-service watch` command, It listens for changes to the entry file of configuration by passing the specified `--key` to bundle (in `watch` mode)
 
-## Custom Config
+## Customize Configuration
 
-This plugin provide custom config file that you can specify entries manually in Programmatically. You can create a file named `multiple-page.config.js`, that content like below:
+The plugin provides the ability to customize the configuration so that you can programmatically expose the configuration of multiple pages by creating a file called `multiple-page.config.js`:
 
 ``` js
 const path = require('path')
@@ -88,6 +96,37 @@ module.exports = {
 ```
 
 If you have both files (`Views.json`、`multiple-page.config.js`) in your root directory, The `multiple-page.config.js` file have a higher priority.
+
+## Not Vue-CLI created Project
+
+If your project is not created by vue-cli. please refer to the following steps. (This scenario is suitable for older, multiple-page projects that are rendered primarily by backend template engines)
+
+`step1`: Installing these dependencies in your project if you haven't installed them
+
+``` sh
+yarn add @vue/cli-service vue-template-compiler --dev
+yarn add vue
+```
+
+`step2`: Add the following script commands to your `package.json` file:
+
+``` json
+{
+  "scripts": {
+    "init:config": "vue-cli-service init-config",
+    "watch": "vue-cli-service watch-multi",
+    "build": "vue-cli-service build-multi"
+  }
+}
+```
+
+`step3`: Add this plugin to your project
+
+``` sh
+vue add multiple-page
+```
+
+Finally Enjoy the same features as vue-cli
 
 ## TODO
 
