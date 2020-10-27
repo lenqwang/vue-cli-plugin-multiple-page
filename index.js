@@ -40,7 +40,7 @@ module.exports = (api, options) => {
   },
   (args) => {
     const { key, inspect } = args
-    const immediate = typeof inspect === 'undefined' && !inspect
+    const immediate = typeof inspect === 'undefined'
     const config = resolveWatch(api, options, key, immediate)
 
     if (!immediate) {
