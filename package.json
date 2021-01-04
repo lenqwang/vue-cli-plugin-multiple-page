@@ -11,6 +11,10 @@
   "bugs": {
     "url": "https://github.com/qqcome110/vue-cli-plugin-multiple-page/issues"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/lenqwang/vue-cli-plugin-multiple-page"
+  },
   "scripts": {
     "cz": "npx git-cz",
     "release": "dotenv release-it --"
